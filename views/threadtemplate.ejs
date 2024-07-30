@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reply<%= id %></title>
+  <script>
+    const board = "<%= board %>";
+    const id = "<%= id %>";
+  </script>
+  <script src="/thread.js"></script>
+  <link rel="stylesheet" href="/thread.css">
+</head>
+<body>
+  <h1 id="board"><%= board || "default" %></h1>
+  <div id="thread-box">
+    <h2 class="thread-title"><%= thread.title %></h2>
+    <h2 class="thread-content"><%= thread.content %></h2>
+  </div>
+  <input type="text" placeholder="title" id="title">
+  <input type="text" placeholder="content" id="content">
+  <button onClick="newReply()">Create a new reply</button>
+  <div class="reply-box"></div>
+</body>
+</html>
